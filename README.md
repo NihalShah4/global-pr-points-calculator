@@ -1,0 +1,1 @@
+# global-pr-points-calculator
