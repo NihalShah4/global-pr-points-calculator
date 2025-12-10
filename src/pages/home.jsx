@@ -1,14 +1,56 @@
+import { Link } from "react-router-dom";
+
+export default function Home() {
+  return (
+    <main style={styles.page}>
+      <section style={styles.container}>
+        <h1 style={styles.title}>🌍 Global PR Points Calculator</h1>
+        <p style={styles.subtitle}>
+          Your one-stop platform to compare PR eligibility for major countries.
+        </p>
+
+        <div style={styles.grid}>
+          <Link to="/canada" style={styles.card}>
+            <span style={styles.flag}>CA</span>
+            <span>Canada PR</span>
+          </Link>
+
+          <Link to="/australia" style={styles.card}>
+            <span style={styles.flag}>AU</span>
+            <span>Australia PR</span>
+          </Link>
+
+          <Link to="/new-zealand" style={styles.card}>
+            <span style={styles.flag}>NZ</span>
+            <span>New Zealand PR</span>
+          </Link>
+
+          <Link to="/uk" style={styles.card}>
+            <span style={styles.flag}>GB</span>
+            <span>UK Skilled Worker Points</span>
+          </Link>
+
+          <Link to="/germany" style={styles.card}>
+            <span style={styles.flag}>DE</span>
+            <span>Germany Points System</span>
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
+
 const styles = {
-  wrapper: {
+  page: {
+    width: "100%",
     display: "flex",
     justifyContent: "center",
-    width: "100%",
   },
   container: {
     width: "100%",
-    maxWidth: "1200px",              // wider content area
-    margin: "40px auto 0",          // <-- center it
-    padding: "0 24px 40px",
+    maxWidth: "1200px",          // use more of the screen
+    margin: "40px auto 0",       // center horizontally
+    padding: "0 32px 40px",      // a bit more side padding
   },
   title: {
     fontSize: "32px",
@@ -22,7 +64,7 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
     gap: "20px",
   },
   card: {

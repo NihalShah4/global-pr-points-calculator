@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import CanadaPR from "./pages/CanadaPR";
-import AustraliaPR from "./pages/AustraliaPR";
-import NewZealandPR from "./pages/NewZealandPR";
-import UKPR from "./pages/UKPR";
-import GermanyPR from "./pages/GermanyPR";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Home from "./pages/Home.jsx";
+import CanadaPR from "./pages/CanadaPR.jsx";
+import AustraliaPR from "./pages/AustraliaPR.jsx";
+import NewZealandPR from "./pages/NewZealandPR.jsx";
+import UKPR from "./pages/UKPR.jsx";
+import GermanyPR from "./pages/GermanyPR.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -16,8 +16,8 @@ function App() {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          background: "#020617", // full-page dark background
-          color: "#e5e7eb",      // light text
+          background: "#020617",
+          color: "#e5e7eb",
         }}
       >
         <Navbar />
