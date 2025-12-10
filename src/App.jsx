@@ -11,18 +11,30 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-      <Navbar />
-      
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/canada" element={<CanadaPR />} />
-        <Route path="/australia" element={<AustraliaPR />} />
-        <Route path="/new-zealand" element={<NewZealandPR />} />
-        <Route path="/uk" element={<UKPR />} />
-        <Route path="/germany" element={<GermanyPR />} />
-      </Routes>
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          background: "#020617", // full-page dark background
+          color: "#e5e7eb",      // light text
+        }}
+      >
+        <Navbar />
 
-      <Footer />
+        <div style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/canada" element={<CanadaPR />} />
+            <Route path="/australia" element={<AustraliaPR />} />
+            <Route path="/new-zealand" element={<NewZealandPR />} />
+            <Route path="/uk" element={<UKPR />} />
+            <Route path="/germany" element={<GermanyPR />} />
+          </Routes>
+        </div>
+
+        <Footer />
+      </div>
     </Router>
   );
 }
