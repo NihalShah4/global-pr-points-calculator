@@ -43,10 +43,14 @@ export default function Home() {
 const styles = {
   page: {
     width: "100%",
+    display: "flex",
+    justifyContent: "center",
   },
   container: {
     width: "100%",
-    margin: "40px 32px 40px",       // center horizontally
+    maxWidth: "1200px",
+    margin: "40px auto 40px",
+    padding: "0 32px 40px",
   },
   title: {
     fontSize: "32px",

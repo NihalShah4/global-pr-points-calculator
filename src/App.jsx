@@ -13,6 +13,7 @@ function App() {
     <Router>
       <div
         style={{
+          width: "100%",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -22,7 +23,7 @@ function App() {
       >
         <Navbar />
 
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, width: "100%" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/canada" element={<CanadaPR />} />
