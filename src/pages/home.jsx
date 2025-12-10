@@ -43,14 +43,10 @@ export default function Home() {
 const styles = {
   page: {
     width: "100%",
-    display: "flex",
-    justifyContent: "center",
   },
   container: {
     width: "100%",
-    maxWidth: "1200px",          // use more of the screen
-    margin: "40px auto 0",       // center horizontally
-    padding: "0 32px 40px",      // a bit more side padding
+    margin: "40px 32px 40px",       // center horizontally
   },
   title: {
     fontSize: "32px",
@@ -64,7 +60,7 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
     gap: "20px",
   },
   card: {
