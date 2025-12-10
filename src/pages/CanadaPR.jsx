@@ -128,28 +128,36 @@ export default function CanadaPR() {
 }
 
 const styles = {
-  container: { padding: "40px", maxWidth: "700px", margin: "auto" },
+  container: {
+    maxWidth: "1200px",
+    margin: "40px auto",
+    padding: "0 24px 40px",
+  },
   card: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "12px",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "16px",
     padding: "20px",
-    background: "#f8fafc",
-    borderRadius: "10px"
+    background: "#020617",
+    borderRadius: "12px",
+    border: "1px solid #1e293b",
   },
   button: {
     marginTop: "15px",
     padding: "12px",
     background: "#2563eb",
     color: "white",
-    borderRadius: "5px",
-    cursor: "pointer"
+    borderRadius: "6px",
+    border: "none",
+    cursor: "pointer",
+    fontWeight: 600,
   },
   result: {
-    marginTop: "20px",
+    marginTop: "24px",
     padding: "20px",
-    background: "#e0f2fe",
-    borderRadius: "10px",
-    textAlign: "center"
-  }
+    background: "#0f172a",
+    borderRadius: "12px",
+    border: "1px solid #1e293b",
+    textAlign: "center",
+  },
 };

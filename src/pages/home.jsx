@@ -1,54 +1,14 @@
-import { Link } from "react-router-dom";
-
-export default function Home() {
-  return (
-    <div style={styles.wrapper}>
-      <div style={styles.container}>
-        <h1 style={styles.title}>🌍 Global PR Points Calculator</h1>
-        <p style={styles.subtitle}>
-          Your one-stop platform to compare PR eligibility for major countries.
-        </p>
-
-        <div style={styles.grid}>
-          <Link to="/canada" style={styles.card}>
-            <span style={styles.flag}>CA</span>
-            <span>Canada PR</span>
-          </Link>
-
-          <Link to="/australia" style={styles.card}>
-            <span style={styles.flag}>AU</span>
-            <span>Australia PR</span>
-          </Link>
-
-          <Link to="/new-zealand" style={styles.card}>
-            <span style={styles.flag}>NZ</span>
-            <span>New Zealand PR</span>
-          </Link>
-
-          <Link to="/uk" style={styles.card}>
-            <span style={styles.flag}>GB</span>
-            <span>UK Skilled Worker Points</span>
-          </Link>
-
-          <Link to="/germany" style={styles.card}>
-            <span style={styles.flag}>DE</span>
-            <span>Germany Points System</span>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const styles = {
   wrapper: {
     display: "flex",
     justifyContent: "center",
+    width: "100%",
   },
   container: {
     width: "100%",
-    maxWidth: "1100px",        // wider content area
-    padding: "48px 24px",
+    maxWidth: "1200px",              // wider content area
+    margin: "40px auto 0",          // <-- center it
+    padding: "0 24px 40px",
   },
   title: {
     fontSize: "32px",
@@ -62,15 +22,15 @@ const styles = {
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
     gap: "20px",
   },
   card: {
     display: "flex",
     flexDirection: "column",
-    gap: "4px",
+    gap: "6px",
     padding: "18px 16px",
-    background: "#0f172a",
+    background: "#020617",
     borderRadius: "12px",
     border: "1px solid #1e293b",
     textDecoration: "none",
