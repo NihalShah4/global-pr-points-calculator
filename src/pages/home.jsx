@@ -1,35 +1,47 @@
 import { Link } from "react-router-dom";
 
+// Flag images
+import caFlag from "../assets/flags/canada.jpg";
+import auFlag from "../assets/flags/australia.png";
+import nzFlag from "../assets/flags/newzealand.jpg";
+import ukFlag from "../assets/flags/uk.png";
+import deFlag from "../assets/flags/germany.png";
+
 const countries = [
   {
     code: "CA",
     name: "Canada PR",
     path: "/canada",
     blurb: "Express Entry–style CRS points for skilled workers.",
+    flag: caFlag,
   },
   {
     code: "AU",
     name: "Australia PR",
     path: "/australia",
     blurb: "General Skilled Migration points (age, skills, English).",
+    flag: auFlag,
   },
   {
     code: "NZ",
     name: "New Zealand PR",
     path: "/new-zealand",
     blurb: "Skilled Migrant–style points with NZ-specific factors.",
+    flag: nzFlag,
   },
   {
     code: "GB",
     name: "UK Skilled Worker",
     path: "/uk",
     blurb: "Salary, sponsorship and shortage-occupation style rules.",
+    flag: ukFlag,
   },
   {
     code: "DE",
     name: "Germany Points System",
     path: "/germany",
     blurb: "Skilled migration / Blue Card–style demo calculator.",
+    flag: deFlag,
   },
 ];
 
@@ -60,9 +72,19 @@ export default function Home() {
           <p style={styles.gridTitle}>Start with a country</p>
           <div style={styles.grid}>
             {countries.map((c) => (
-              <Link key={c.code} to={c.path} style={styles.card}>
+              <Link
+                key={c.code}
+                to={c.path}
+                style={styles.card}
+                className="country-card"
+              >
                 <div style={styles.cardHeader}>
-                  <span style={styles.flag}>{c.code}</span>
+                  <img
+                    src={c.flag}
+                    alt={`${c.name} flag`}
+                    style={styles.flagImg}
+                    className="flag-img"
+                  />
                   <span style={styles.cardName}>{c.name}</span>
                 </div>
                 <p style={styles.cardBlurb}>{c.blurb}</p>
@@ -180,13 +202,12 @@ const styles = {
     fontSize: "14px",
     cursor: "pointer",
     boxShadow: "0 10px 30px rgba(15,23,42,0.85)",
-    transition: "transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out, background 0.15s ease-out",
   },
   cardHeader: {
     display: "flex",
     alignItems: "center",
-    gap: "8px",
-    marginBottom: "2px",
+    gap: "10px",
+    marginBottom: "4px",
   },
   cardName: {
     fontWeight: 500,
@@ -196,14 +217,14 @@ const styles = {
     fontSize: "12px",
     color: "#9ca3af",
   },
-  flag: {
-    fontSize: "11px",
-    padding: "2px 7px",
-    borderRadius: "999px",
-    border: "1px solid #334155",
-    display: "inline-block",
-    color: "#cbd5f5",
-    background: "rgba(15,23,42,0.9)",
+  // rounded flags
+  flagImg: {
+    width: "26px",
+    height: "26px",
+    borderRadius: "999px", // circular
+    objectFit: "cover",
+    boxShadow: "0 0 4px rgba(0,0,0,0.7)",
+    flexShrink: 0,
   },
   disclaimerSection: {
     maxWidth: "1120px",
