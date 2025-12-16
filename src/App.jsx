@@ -1,5 +1,5 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home.jsx";
+import Home from "./pages/home.jsx";
 import CanadaPR from "./pages/CanadaPR.jsx";
 import AustraliaPR from "./pages/AustraliaPR.jsx";
 import NewZealandPR from "./pages/NewZealandPR.jsx";
